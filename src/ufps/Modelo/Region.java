@@ -5,6 +5,7 @@
  */
 package ufps.Modelo;
 
+import java.util.Objects;
 import ufps.util.colecciones_seed.ListaCD;
 
 /**
@@ -69,5 +70,31 @@ public class Region {
         }
         return null;
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Region other = (Region) obj;
+        if (!Objects.equals(this.nombre, other.nombre)) {
+            return false;
+        }
+        return true;
+    }
+    
+    
     
 }

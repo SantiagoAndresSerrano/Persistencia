@@ -141,10 +141,11 @@ Región Eje Cafetero - Antioquia,5,Antioquia,5001,Medellín
         String msg="";
         for(Region r:this.regiones)
         {
-            msg+="Region:"+r.getNombre()+":\n";
+            msg+="\n***********************************************************************\n";
+            msg+="Region:"+r.getNombre()+": Código de región:"+r.getCodigo()+"\n";
             for(Departamento d:r.getDptos())
             {
-                msg+="Departamento:"+d.getNombre()+" \n";
+                msg+="Departamento:"+d.getNombre()+" Código dpto:"+d.getCodigo()+"\n";
                 
                 for(Municipio m:d.getMunicipios())
                 {
@@ -163,6 +164,17 @@ Región Eje Cafetero - Antioquia,5,Antioquia,5001,Medellín
     
     
     
+    public String getListadoRegiones()
+    {
+    String msg="";
+    for(Region r:this.regiones)
+        {
+            
+            msg+="Region:"+r.getNombre()+": Código de región:"+r.getCodigo()+"\n";
     
+        }
+    return msg;
+    
+    }
     
 }

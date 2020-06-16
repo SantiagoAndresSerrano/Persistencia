@@ -5,22 +5,26 @@
  */
 package ufps.Modelo;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
- * Habitante
+ *  Para manejar las fechas: https://devs4j.com/2018/10/30/java-8-manejo-de-fechas-y-tiempo-localdate-localtime-y-localdatetime/
  * @author MADARME
  */
 public class Persona {
     
     private long cedula;
-    private Date fechaNacimiento;
+    private LocalDate fechaNacimiento;
     private String nombres;
     private String email;
     private String direccion;
     private boolean genero;
 
-    public Persona(long cedula, Date fechaNacimiento, String nombres, String email, String direccion, boolean genero) {
+    public Persona() {
+    }
+
+    public Persona(long cedula, LocalDate fechaNacimiento, String nombres, String email, String direccion, boolean genero) {
         this.cedula = cedula;
         this.fechaNacimiento = fechaNacimiento;
         this.nombres = nombres;
@@ -29,9 +33,8 @@ public class Persona {
         this.genero = genero;
     }
 
-    public Persona() {
-    }
-
+    
+    
     public long getCedula() {
         return cedula;
     }
@@ -40,11 +43,11 @@ public class Persona {
         this.cedula = cedula;
     }
 
-    public Date getFechaNacimiento() {
+    public LocalDate getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(Date fechaNacimiento) {
+    public void setFechaNacimiento(LocalDate fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 
@@ -78,12 +81,13 @@ public class Persona {
 
     public void setGenero(boolean genero) {
         this.genero = genero;
+        
+        
     }
+    
+    
 
-    @Override
-    public String toString() {
-        return "Persona{" + "cedula=" + cedula + ", fechaNacimiento=" + fechaNacimiento + ", nombres=" + nombres + ", email=" + email + ", direccion=" + direccion + ", genero=" + genero + '}';
-    }
+    
     
     
     

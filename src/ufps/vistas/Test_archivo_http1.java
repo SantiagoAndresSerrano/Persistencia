@@ -12,7 +12,7 @@ public class Test_archivo_http1
    
     public static void main(String args[])
     {
-        String url="http://ufps30.madarme.co/dptoDane.txt";
+        String url="http://ufps30.madarme.co/persistencia/dane_personas.txt";
         ArchivoLeerURL file=new ArchivoLeerURL(url);
         Object v[]=file.leerArchivo();
         ListaCD<String> l=new ListaCD<String>();
