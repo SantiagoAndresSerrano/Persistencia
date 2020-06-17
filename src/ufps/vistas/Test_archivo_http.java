@@ -12,7 +12,7 @@ public class Test_archivo_http
    
     public static void main(String args[])
     {
-        String url="https://gitlab.com/madarme/archivos-persistencia/raw/master/estudiantes.csv";
+        String url="http://ufps30.madarme.co/persistencia/subsidioregion.txt";
         ArchivoLeerURL file=new ArchivoLeerURL(url);
         Object v[]=file.leerArchivo();
         ListaCD<String> l=new ListaCD<String>();

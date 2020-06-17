@@ -6,6 +6,7 @@
 package ufps.Modelo;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 /**
@@ -20,6 +21,7 @@ public class Persona {
     private String email;
     private String direccion;
     private boolean genero;
+    private boolean siEsBeneficiario=false;
 
     public Persona() {
     }
@@ -84,8 +86,51 @@ public class Persona {
         
         
     }
+
+    public boolean isSiEsBeneficiario() {
+        return siEsBeneficiario;
+    }
+
+    public void setSiEsBeneficiario(boolean siEsBeneficiario) {
+        this.siEsBeneficiario = siEsBeneficiario;
+    }
     
     
+    
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 47 * hash + (int) (this.cedula ^ (this.cedula >>> 32));
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Persona other = (Persona) obj;
+        if (this.cedula != other.cedula) {
+            return false;
+        }
+        return true;
+    }
+    
+    
+    public int getEdad()
+    {
+        
+         LocalDate hoy=LocalDate.now();
+         return (int)(ChronoUnit.YEARS.between(this.fechaNacimiento, hoy)); 
+        
+    }
 
     
     

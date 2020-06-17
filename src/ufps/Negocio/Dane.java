@@ -9,6 +9,7 @@ import ufps.Modelo.Region;
 import ufps.util.colecciones_seed.ListaCD;
 import ufps.util.varios.ArchivoLeerTexto;
 import ufps.Modelo.*;
+import ufps.util.colecciones_seed.Pila;
 import ufps.util.varios.ArchivoLeerURL;
 
 /**
@@ -151,9 +152,11 @@ Región Eje Cafetero - Antioquia,5,Antioquia,5001,Medellín
                 {
                     msg+="Municipio:"+m.getNombre()+"\n";
                     
-                    for(Persona p:m.getPersonas())
+                    //Cuando este proceso se realice , se borra la cola de personas
+                    //::::::: ADVERTENCIA  ::::::::::::
+                    while(!m.getPersonas().esVacia())
                     {
-                    msg+="\n Persona:"+p.toString();
+                    msg+="\n Persona:"+m.getPersonas().deColar().toString();
                     }
                 }
                 
@@ -170,11 +173,107 @@ Región Eje Cafetero - Antioquia,5,Antioquia,5001,Medellín
     for(Region r:this.regiones)
         {
             
-            msg+="Region:"+r.getNombre()+": Código de región:"+r.getCodigo()+"\n";
+            msg+="Region:"+r.getNombre()+": Código de región:"+r.getCodigo()+" , Cantidad de subsidios:"+r.getCantidadBeneficiarios()+"\n";
     
         }
     return msg;
     
     }
+    
+    
+    
+    //Punto 2. 
+    public void cargarSubsidioRegion(String url)
+    {
+       
+        ArchivoLeerURL file=new ArchivoLeerURL(url);
+        Object v[]=file.leerArchivo();
+        
+        for(int i=1;i<v.length;i++)
+        {
+        
+        String registro=v[i].toString();
+        /**
+         * codigo_region;cantidad de subsidios
+            1;3
+            2;3
+            3;2
+            4;3
+            5;3
+            6;4
+         */
+        String datoRegion[]=registro.split(";");
+        int codRegion=Integer.parseInt(datoRegion[0]);
+        int canSub=Integer.parseInt(datoRegion[1]);
+        //Suponemos que el archivo NO CONTIENE DATOS ERRADOS
+        this.regiones.get(codRegion-1).setCantidadBeneficiarios(canSub);
+        
+        
+        }
+    }
+    
+    //Punto 3.
+    public void cargarPersonas(String url)
+    {
+    
+    }
+    
+    //Punto 4.a
+    public int procesarSubsidios()
+    {
+        // :)
+        return 0;
+    }
+    
+    //Punto 4.b
+    public int getCantidadSubsidioDepartamentos()
+    {
+        // :)
+        return 0;
+    }
+    
+    //Punto 4.c
+    
+    public ListaCD<Persona> getPersonasNoSubsidio()
+    {
+    
+        // :)
+        return null;
+    }
+    
+    
+    //Punto 4.d
+    
+    public Pila<Region> getSubisidiosRegion()
+    {
+        // :)
+        return null;
+    }
+    
+    
+    //Punto 4.e
+    public String getDatosPersona(long cedula)
+    {
+        // :)
+        return "";
+    }
+    
+    
+    // Punto 4.f
+    
+    public int getCantidadSubsidioMunicipio(int codMunicipio)
+    {
+        // :)
+        return 0;
+    }
+    
+    //Punto 4.g
+    public ListaCD<Persona> getDatosErroneos()
+    {
+        // :)
+        return null;
+    }
+    
+    
     
 }

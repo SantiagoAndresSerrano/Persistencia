@@ -17,6 +17,8 @@ public class Region {
     private int codigo; //Se va a generar
     private String nombre;
     private ListaCD<Departamento> dptos=new ListaCD();
+    private int cantidadBeneficiarios=0;
+   
 
     public Region() {
     }
@@ -25,6 +27,17 @@ public class Region {
         this.codigo = codigo;
         this.nombre = nombre;
     }
+
+    public int getCantidadBeneficiarios() {
+        return cantidadBeneficiarios;
+    }
+
+    public void setCantidadBeneficiarios(int cantidadBeneficiarios) {
+        this.cantidadBeneficiarios = cantidadBeneficiarios;
+    }
+    
+    
+    
 
     public int getCodigo() {
         return codigo;

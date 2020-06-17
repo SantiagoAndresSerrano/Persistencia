@@ -16,6 +16,8 @@ public class TestDane {
         String url="http://ufps30.madarme.co/dptoDane.csv";
         Dane dane=new Dane(url);
         //System.out.println(dane.toString());
+        
+        dane.cargarSubsidioRegion("http://ufps30.madarme.co/persistencia/subsidioregion.txt");
         System.out.println(dane.getListadoRegiones());
         
     }

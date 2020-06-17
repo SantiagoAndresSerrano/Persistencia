@@ -5,6 +5,7 @@
  */
 package ufps.Modelo;
 
+import ufps.util.colecciones_seed.ColaP;
 import ufps.util.colecciones_seed.ListaCD;
 
 /**
@@ -15,7 +16,8 @@ public class Municipio {
     
     private int codigo;
     private String nombre;
-    ListaCD<Persona> personas=new ListaCD();
+    ColaP<Persona> personas=new ColaP();
+ 
 
     public Municipio() {
     }
@@ -41,14 +43,19 @@ public class Municipio {
         this.nombre = nombre;
     }
 
-    public ListaCD<Persona> getPersonas() {
+    public ColaP<Persona> getPersonas() {
         return personas;
     }
 
-    public void setPersonas(ListaCD<Persona> personas) {
+    public void setPersonas(ColaP<Persona> personas) {
         this.personas = personas;
     }
 
+    
+
+    
+    
+    
     @Override
     public int hashCode() {
         int hash = 7;
