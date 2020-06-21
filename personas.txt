@@ -6,7 +6,7 @@ cedula;fecha;nombre;email;direccion;genero(0=mujer, 1=hombre);codigo_municipio
 2762766;15/07/65;pepe5;pepe5@email.com;calle 1 - av 4;0;68001
 5999378;8/06/56;pepe6;pepe6@email.com;calle 1 - av 5;0;68001
 5718127;17/06/56;pepe7;pepe7@email.com;calle 1 - av 6;0;68001
-4115690;10/04/76;pepe8;pepe8@email.com;calle 1 - av 7;0;68001
+4115690;10/04/76;pepe8;pepe8@email.com;calle 1 - av 7;0;76036
 8020284;20/09/76;pepe9;pepe9@email.com;calle 1 - av 8;0;68001
 3734792;28/11/67;pepe10;pepe10@email.com;calle 1 - av 9;0;68001
 9228984;3/07/59;pepe11;pepe11@email.com;calle 1 - av 10;0;54001
@@ -15,7 +15,7 @@ cedula;fecha;nombre;email;direccion;genero(0=mujer, 1=hombre);codigo_municipio
 6863213;20/06/77;pepe14;pepe14@email.com;calle 1 - av 13;0;8001
 9777631;17/06/67;pepe15;pepe15@email.com;calle 1 - av 14;0;8001
 1853330;9/08/74;pepe16;pepe16@email.com;calle 1 - av 15;0;8001
-8723586;19/11/73;pepe17;pepe17@email.com;calle 1 - av 16;0;8001
+8723586;19/11/73;pepe17;pepe17@email.com;calle 1 - av 16;0;76036
 1518101;4/11/60;pepe18;pepe18@email.com;calle 1 - av 17;0;8001
 207037;2/08/66;pepe19;pepe19@email.com;calle 1 - av 18;0;8001
 8792585;31/10/61;pepe20;pepe20@email.com;calle 1 - av 19;0;54001
