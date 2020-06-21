@@ -8,7 +8,7 @@ cedula;fecha;nombre;email;direccion;genero(0=mujer, 1=hombre);codigo_municipio
 5718127;17/06/56;pepe7;pepe7@email.com;calle 1 - av 6;0;68001
 4115690;10/04/76;pepe8;pepe8@email.com;calle 1 - av 7;0;68001
 8020284;20/09/76;pepe9;pepe9@email.com;calle 1 - av 8;0;68001
-3734792;28/11/67;pepe10;pepe10@email.com;calle 1 - av 9;0;680
+3734792;28/11/67;pepe10;pepe10@email.com;calle 1 - av 9;0;68001
 9228984;3/07/59;pepe11;pepe11@email.com;calle 1 - av 10;0;54001
 2434722;16/11/62;pepe12;pepe12@email.com;calle 1 - av 11;0;54001
 3667348;3/04/56;pepe13;pepe13@email.com;calle 1 - av 12;1;54001
