@@ -21,7 +21,7 @@ public class TestColaPrioridad {
         nombres.enColar("Juan", 10);
         nombres.enColar("Javier", 5);
         nombres.enColar("Genesis", 3);
-        nombres.enColar("Cristian", 10);
+        nombres.enColar("Cristian",0);
         
         while(!nombres.esVacia())
             System.out.println(nombres.deColar());

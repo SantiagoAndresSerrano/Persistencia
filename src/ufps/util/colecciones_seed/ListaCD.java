@@ -178,7 +178,19 @@ public class ListaCD <T> implements Iterable<T>
             System.err.println(e.getMessage());
         }
     }
-
+     public void concatenarListaCD(ListaCD<T> lDC) {
+         
+         if(lDC.esVacia()){
+             return;
+         }
+         
+         
+        NodoD<T> anteriorCabeza = lDC.cabeza.getAnt();
+        anteriorCabeza.setSig(cabeza.getSig());
+        cabeza.getSig().setAnt(anteriorCabeza);
+        this.cabeza.setSig(lDC.cabeza.getSig());
+        this.tamanio += lDC.tamanio;
+    }
     /**
      * Metodo que permite conocer el tamaño de la lista. <br>
      * <b>post: </b> Se retorno el numero de elementos existentes en la Lista.<br>
@@ -248,7 +260,7 @@ public class ListaCD <T> implements Iterable<T>
             return ("Lista Vacia");
         String r="";
         for(NodoD<T> x=this.cabeza.getSig();x.getInfo()!=null;x=x.getSig())
-            r+=x.getInfo().toString()+"<->";
+            r+=x.getInfo().toString()+"\n";
         return(r);
     }
     

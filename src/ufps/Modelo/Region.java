@@ -13,12 +13,12 @@ import ufps.util.colecciones_seed.ListaCD;
  * @author MADARME
  */
 public class Region {
-    
+
     private int codigo; //Se va a generar
     private String nombre;
-    private ListaCD<Departamento> dptos=new ListaCD();
-    private int cantidadBeneficiarios=0;
-   
+    private ListaCD<Departamento> dptos = new ListaCD();
+    private int cantidadBeneficiarios = 0;
+    private int subsidiosActuales = 0;
 
     public Region() {
     }
@@ -35,9 +35,28 @@ public class Region {
     public void setCantidadBeneficiarios(int cantidadBeneficiarios) {
         this.cantidadBeneficiarios = cantidadBeneficiarios;
     }
-    
-    
-    
+
+    public int getSubsidiosActuales() {
+        return subsidiosActuales;
+    }
+
+    public void setSubsidiosActuales(int subsidiosActuales) {
+        this.subsidiosActuales = subsidiosActuales;
+    }
+
+    public int cantidadBeneficiados() {
+        
+        int cantidad = 0;
+        for (Departamento d : dptos) {
+            
+             int de=d.cantidadBenefiados();
+             
+             System.out.println("DEPARTAMENTO "+d.getNombre()+" SUBSIDIOS RECIBIDOS "+de);
+            
+            cantidad += de;
+        }
+        return cantidad;
+    }
 
     public int getCodigo() {
         return codigo;
@@ -65,21 +84,20 @@ public class Region {
 
     @Override
     public String toString() {
-        return "Region{" + "codigo=" + codigo + ", nombre=" + nombre + ", dptos=\n" + dptos.toString() + '}';
+        return "Region{" + ", nombre=" + nombre;//", dptos=\n" + dptos.toString() + '}';
     }
-    
-    
-    public Departamento buscarDpto(Departamento d)
-    {
+
+    public Departamento buscarDpto(Departamento d) {
         //Reduncia:
         //Por definición:
-        if(this.dptos.esVacia())
+        if (this.dptos.esVacia()) {
             return null;
-    
-        for(Departamento dpto:this.dptos)
-        {
-            if(dpto.equals(d))
+        }
+
+        for (Departamento dpto : this.dptos) {
+            if (dpto.equals(d)) {
                 return dpto;
+            }
         }
         return null;
     }
@@ -107,7 +125,5 @@ public class Region {
         }
         return true;
     }
-    
-    
-    
+
 }

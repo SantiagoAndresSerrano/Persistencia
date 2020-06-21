@@ -8,6 +8,7 @@ package ufps.Modelo;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
+import java.util.Objects;
 
 /**
  *  Para manejar las fechas: https://devs4j.com/2018/10/30/java-8-manejo-de-fechas-y-tiempo-localdate-localtime-y-localdatetime/
@@ -15,7 +16,7 @@ import java.util.Date;
  */
 public class Persona {
     
-    private long cedula;
+    private Long cedula;
     private LocalDate fechaNacimiento;
     private String nombres;
     private String email;
@@ -26,7 +27,7 @@ public class Persona {
     public Persona() {
     }
 
-    public Persona(long cedula, LocalDate fechaNacimiento, String nombres, String email, String direccion, boolean genero) {
+    public Persona(Long cedula, LocalDate fechaNacimiento, String nombres, String email, String direccion, boolean genero) {
         this.cedula = cedula;
         this.fechaNacimiento = fechaNacimiento;
         this.nombres = nombres;
@@ -41,7 +42,7 @@ public class Persona {
         return cedula;
     }
 
-    public void setCedula(long cedula) {
+    public void setCedula(Long cedula) {
         this.cedula = cedula;
     }
 
@@ -117,10 +118,7 @@ public class Persona {
             return false;
         }
         final Persona other = (Persona) obj;
-        if (this.cedula != other.cedula) {
-            return false;
-        }
-        return true;
+        return Objects.equals(this.cedula, other.cedula);
     }
     
     
@@ -132,6 +130,12 @@ public class Persona {
         
     }
 
+    @Override
+    public String toString() {
+        return "" + "fechaNacimiento=" + fechaNacimiento + ", nombres=" + nombres + ", siEsBeneficiario=" + siEsBeneficiario +"";
+    }
+    
+    
     
     
     

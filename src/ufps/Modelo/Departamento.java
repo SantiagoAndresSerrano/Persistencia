@@ -12,10 +12,10 @@ import ufps.util.colecciones_seed.ListaCD;
  * @author MADARME
  */
 public class Departamento {
-    
+
     private int codigo;
     private String nombre;
-    ListaCD<Municipio> municipios=new ListaCD();
+    ListaCD<Municipio> municipios = new ListaCD();
 
     public Departamento() {
     }
@@ -49,6 +49,28 @@ public class Departamento {
         this.municipios = municipios;
     }
 
+    public int cantidadBenefiados() {
+
+        int cantidad = 0;
+        for (Municipio m : this.municipios) {
+            int c = m.beneficiados();
+            cantidad += c;
+           
+        }
+        
+        return cantidad;
+
+    }
+    public Boolean existeCodigo(int codigo){
+    
+        for(Municipio m: this.municipios){
+        
+            if(m.getCodigo()==codigo)
+                return true;
+        
+        }
+    return false;
+    }
     @Override
     public int hashCode() {
         int hash = 7;
@@ -78,7 +100,5 @@ public class Departamento {
     public String toString() {
         return "Departamento{" + "codigo=" + codigo + ", nombre=" + nombre + ", municipios=\n" + municipios.toString() + '}';
     }
-    
-    
-    
+
 }

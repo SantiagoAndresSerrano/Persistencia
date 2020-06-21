@@ -120,6 +120,7 @@ public class Pila<T>
      * El String tiene el formato "e1->e2->e3..->en", donde e1, e2, ..., en son los los elementos de la Pila. <br>
      * @return La representacion en String de la Pila.
      */
+    
     @Override
     public String toString( )
     {
