@@ -1,4 +1,3 @@
 cedula;fecha;nombre;email;direccion;genero(0=mujer, 1=hombre);codigo_municipio
 4068079;13/01/63;YYYYYYYYYYYYY;pepe1@email.com;calle 1 - av 0;1;5001
 5148539;15/12/73;XXXXXXXXXXXX;pepe2@email.com;calle 1 - av 1;1;5001
-d
