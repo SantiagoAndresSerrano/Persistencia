@@ -1,0 +1,10 @@
+cod;nombreFacultad
+1;Ingenieria
+2;Ciencias de la Salud
+3;Ciencias Basicas
+4;Ciencias politicas
+5;Ciencias administrativas
+6;Ciencias Sociales
+7;arte 
+8;Ecologia
+9;Comunicación social
